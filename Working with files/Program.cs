@@ -5,6 +5,7 @@ namespace Working_with_files
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             double sum = 0;
