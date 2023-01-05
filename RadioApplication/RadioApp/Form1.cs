@@ -20,6 +20,7 @@ namespace RadioApp
             InitializeComponent();
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             comboBox1.SelectedIndex = 0;
+            axWindowsMediaPlayer1.settings.volume = 50;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,8 +30,7 @@ namespace RadioApp
             MessageBox.Show("Добро пожаловать!");
         }
 
-
-        string[] linksOnStations = { "https://rusradio.hostingradio.ru/rusradio96.aacp",
+        readonly string[] linksOnStations = { "https://rusradio.hostingradio.ru/rusradio96.aacp",
             "https://icecast-newradio.cdnvideo.ru/newradio3",
             "https://ep128.hostingradio.ru:8030/ep128",
             "https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_128kbps",
@@ -56,6 +56,16 @@ namespace RadioApp
         private string GetCurrentStation()
         {
             return comboBox1.Text;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume += 10;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume -= 10;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -85,15 +95,21 @@ namespace RadioApp
             }
         }
 
-       /* private void axWindowsMediaPlayer1_StatusChange(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            IWMPMedia cm = axWindowsMediaPlayer1.currentMedia;
+            int volumeLevel = axWindowsMediaPlayer1.settings.volume;
+            MessageBox.Show($"Текущий уровень громкости: {volumeLevel}");
+        }
 
-            if (cm != null)
-            {
-                label1.Text = cm.getItemInfo("Title");
-            }
-        }*/
+        /* private void axWindowsMediaPlayer1_StatusChange(object sender, EventArgs e)
+         {
+             IWMPMedia cm = axWindowsMediaPlayer1.currentMedia;
+
+             if (cm != null)
+             {
+                 label1.Text = cm.getItemInfo("Title");
+             }
+         }*/
 
     }
 }
