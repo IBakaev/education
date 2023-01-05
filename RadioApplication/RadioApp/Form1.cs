@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace RadioApp
@@ -49,8 +50,8 @@ namespace RadioApp
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            progressBar1.Value = 0;
             int currentIndexOfStation = GetIndexOfSelectedItemInComboBox();
-            //string currentStation;
             string linkOnCurrentStation;
             if (currentIndexOfStation < 0)
             {
@@ -58,7 +59,18 @@ namespace RadioApp
             }
             else
             {
-                //currentStation = comboBox1.SelectedItem.ToString();
+                var timer = new System.Windows.Forms.Timer();
+                timer.Interval = 100;
+                timer.Tick += (s, a) =>
+                {
+                    progressBar1.Value += 5;
+                    if (progressBar1.Value == progressBar1.Maximum)
+                    {
+                        timer.Stop();
+                        progressBar1.Value = 0;
+                    }
+                };
+                timer.Start();
                 linkOnCurrentStation = linksOnStations[currentIndexOfStation];
                 axWindowsMediaPlayer1.URL = linkOnCurrentStation;
             }
