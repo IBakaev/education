@@ -33,6 +33,7 @@ namespace RadioApp
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,12 +85,20 @@ namespace RadioApp
             this.comboBox1.Size = new System.Drawing.Size(354, 24);
             this.comboBox1.TabIndex = 2;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(34, 12);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(498, 23);
+            this.progressBar1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::RadioApp.Properties.Resources._1663709348_31_phonoteka_org_p_abstraktnii_temnii_fon_oboi_32;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(568, 346);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
@@ -107,6 +116,7 @@ namespace RadioApp
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
