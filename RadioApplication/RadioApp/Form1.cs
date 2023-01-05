@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Media;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace RadioApp
 {
@@ -18,6 +20,13 @@ namespace RadioApp
             InitializeComponent();
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             comboBox1.SelectedIndex = 0;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            SoundPlayer soundPlayer = new SoundPlayer("Hello.wav");
+            soundPlayer.Play();
+            MessageBox.Show("Добро пожаловать!");
         }
 
 
@@ -34,7 +43,7 @@ namespace RadioApp
             "https://icecast-piterfm.cdnvideo.ru/piterfm",
             "https://nashe1.hostingradio.ru:80/rock-128.mp3"
         };
-        int GetIndexOfSelectedItemInComboBox()
+        private int GetIndexOfSelectedItemInComboBox()
         {
             return comboBox1.FindStringExact(comboBox1.Text);
         }
@@ -44,7 +53,7 @@ namespace RadioApp
             string currentStation = comboBox1.SelectedItem.ToString();
         }
 
-        string GetCurrentStation()
+        private string GetCurrentStation()
         {
             return comboBox1.Text;
         }
@@ -75,5 +84,16 @@ namespace RadioApp
                 axWindowsMediaPlayer1.URL = linkOnCurrentStation;
             }
         }
+
+       /* private void axWindowsMediaPlayer1_StatusChange(object sender, EventArgs e)
+        {
+            IWMPMedia cm = axWindowsMediaPlayer1.currentMedia;
+
+            if (cm != null)
+            {
+                label1.Text = cm.getItemInfo("Title");
+            }
+        }*/
+
     }
 }
