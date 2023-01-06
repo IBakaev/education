@@ -65,13 +65,14 @@ namespace RadioApp
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(434, 289);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 25);
+            this.button1.Size = new System.Drawing.Size(127, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "Играть";
             this.button1.UseVisualStyleBackColor = false;
@@ -82,7 +83,7 @@ namespace RadioApp
             this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -100,7 +101,7 @@ namespace RadioApp
             "Rock FM"});
             this.comboBox1.Location = new System.Drawing.Point(63, 290);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(354, 24);
+            this.comboBox1.Size = new System.Drawing.Size(354, 25);
             this.comboBox1.TabIndex = 2;
             // 
             // progressBar1
