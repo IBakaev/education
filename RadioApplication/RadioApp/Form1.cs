@@ -114,7 +114,7 @@ namespace RadioApp
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             Random random = new Random();
-            char[] symbArr = {'.', ':', ' ', '/', '\''};
+            //char[] symbArr = {'.', ':', ' ', '/', '\''};
             string currentDate = DateTime.Now.ToString("ddhhmmss");
             string filename = $"{currentDate}record.wav";
             string path = Path.Combine(Environment.CurrentDirectory, filename);
