@@ -12,13 +12,24 @@ using System.Windows.Forms;
 using WMPLib;
 using NAudio.Wave;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace RadioApp
 {
+    /*public static class ModifyProgressBarColor
+    {
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
+        static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr w, IntPtr l);
+        public static void SetState(this ProgressBar pBar, int state)
+        {
+            SendMessage(pBar.Handle, 1040, (IntPtr)state, IntPtr.Zero);
+        }
+    }*/
     public partial class Form1 : Form
     {
         private WaveFileWriter RecordedAudioWriter = null;
         private WasapiLoopbackCapture CaptureInstance = null;
+ 
         public Form1()
         {
             //TopMost = true;
@@ -83,10 +94,13 @@ namespace RadioApp
             }
             else
             {
+
                 var timer = new System.Windows.Forms.Timer();
                 timer.Interval = 100;
                 timer.Tick += (s, a) =>
                 {
+                    /*Random random = new Random();
+                    progressBar1.SetState(random.Next(1, 3));*/
                     progressBar1.Value += 5;
                     if (progressBar1.Value == progressBar1.Maximum)
                     {
