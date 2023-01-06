@@ -10,14 +10,18 @@ using System.Threading;
 using System.Media;
 using System.Windows.Forms;
 using WMPLib;
+using NAudio.Wave;
+using System.IO;
 
 namespace RadioApp
 {
     public partial class Form1 : Form
     {
+        private WaveFileWriter RecordedAudioWriter = null;
+        private WasapiLoopbackCapture CaptureInstance = null;
         public Form1()
         {
-            TopMost = true;
+            //TopMost = true;
             InitializeComponent();
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             comboBox1.SelectedIndex = 0;
@@ -107,15 +111,37 @@ namespace RadioApp
             axWindowsMediaPlayer1.settings.volume = 0;
         }
 
-        /* private void axWindowsMediaPlayer1_StatusChange(object sender, EventArgs e)
-         {
-             IWMPMedia cm = axWindowsMediaPlayer1.currentMedia;
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            char[] symbArr = {'.', ':', ' ', '/', '\''};
+            string currentDate = DateTime.Now.ToString("ddhhmmss");
+            string filename = $"{currentDate}record.wav";
+            string path = Path.Combine(Environment.CurrentDirectory, filename);
+            this.CaptureInstance = new WasapiLoopbackCapture();
+            this.RecordedAudioWriter = new WaveFileWriter(path, CaptureInstance.WaveFormat);
+            this.CaptureInstance.DataAvailable += (s, a) =>
+            {
+                this.RecordedAudioWriter.Write(a.Buffer, 0, a.BytesRecorded);
+            };
+            this.CaptureInstance.RecordingStopped += (s, a) =>
+            {
+                this.RecordedAudioWriter.Dispose();
+                this.RecordedAudioWriter = null;
+                CaptureInstance.Dispose();
+            };
+            this.pictureBox5.Enabled = false;
+            this.pictureBox6.Enabled = true;
+            this.CaptureInstance.StartRecording();
+            MessageBox.Show("Запись звука включена. Файл будет сохранён в корневой директории программы");
+        }
 
-             if (cm != null)
-             {
-                 label1.Text = cm.getItemInfo("Title");
-             }
-         }*/
-
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.CaptureInstance.StopRecording();
+            this.pictureBox5.Enabled = true;
+            this.pictureBox6.Enabled = false;
+            MessageBox.Show("Запись остановлена");
+        }
     }
 }
