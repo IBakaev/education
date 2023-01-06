@@ -133,6 +133,16 @@ namespace RadioApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_video_file_1666630 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-video-file-1666630", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap headset {
             get {
                 object obj = ResourceManager.GetObject("headset", resourceCulture);
