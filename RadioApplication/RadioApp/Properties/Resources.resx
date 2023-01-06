@@ -121,6 +121,9 @@
   <data name="volume-up (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\volume-up (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="decrease-volume (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\decrease-volume (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,8 +142,8 @@
   <data name="1663709348_31-phonoteka-org-p-abstraktnii-temnii-fon-oboi-321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1663709348_31-phonoteka-org-p-abstraktnii-temnii-fon-oboi-32.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="volume-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\volume-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="headset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\headset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="volume-up_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\volume-up_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +172,8 @@
   <data name="volume-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\volume-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="decrease-volume (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\decrease-volume (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="volume-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\volume-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="volume-up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\volume-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,7 +190,7 @@
   <data name="1663709348_31-phonoteka-org-p-abstraktnii-temnii-fon-oboi-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1663709348_31-phonoteka-org-p-abstraktnii-temnii-fon-oboi-32.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="headset" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\headset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="no-sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no-sound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
