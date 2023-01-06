@@ -17,6 +17,7 @@ namespace RadioApp
     {
         public Form1()
         {
+            TopMost = true;
             InitializeComponent();
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             comboBox1.SelectedIndex = 0;
@@ -62,7 +63,7 @@ namespace RadioApp
         {
             axWindowsMediaPlayer1.settings.volume += 10;
         }
-
+        
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.settings.volume -= 10;
@@ -99,6 +100,11 @@ namespace RadioApp
         {
             int volumeLevel = axWindowsMediaPlayer1.settings.volume;
             MessageBox.Show($"Текущий уровень громкости: {volumeLevel}");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume = 0;
         }
 
         /* private void axWindowsMediaPlayer1_StatusChange(object sender, EventArgs e)
