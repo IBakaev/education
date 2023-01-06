@@ -143,5 +143,16 @@ namespace RadioApp
             this.pictureBox6.Enabled = false;
             MessageBox.Show("Запись остановлена");
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+            {
+                return;
+            } else
+            {
+                axWindowsMediaPlayer1.URL = $"{openFileDialog1.FileName}";
+            }
+        }
     }
 }
