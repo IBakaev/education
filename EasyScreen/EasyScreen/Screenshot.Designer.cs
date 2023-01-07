@@ -30,10 +30,10 @@ namespace EasyScreen
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -49,6 +49,34 @@ namespace EasyScreen
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Perpetua Titling MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.CadetBlue;
+            this.button2.Location = new System.Drawing.Point(420, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(350, 50);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.CadetBlue;
+            this.button1.Location = new System.Drawing.Point(31, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(350, 50);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -70,37 +98,9 @@ namespace EasyScreen
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.CadetBlue;
-            this.button1.Location = new System.Drawing.Point(31, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(350, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Perpetua Titling MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.CadetBlue;
-            this.button2.Location = new System.Drawing.Point(420, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(350, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // saveFileDialog1
             // 
-            this.saveFileDialog1.Filter = "PNG|*.png|BMP|*.bmp|JPEG|*.jpeg";
+            this.saveFileDialog1.Filter = "PNG|*.png|BMP|*.bmp|JPEG|*.jpeg|JPG|*.jpg";
             // 
             // Screenshot
             // 
