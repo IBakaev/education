@@ -18,7 +18,7 @@ namespace EasyScreen
         {
             InitializeComponent();
         }
-
+            
         private void button1_Click(object sender, EventArgs e)
         {
             this.Opacity = 0.0;
