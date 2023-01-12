@@ -1,0 +1,106 @@
+/*create user C##MED_ONE identified by lostdream;
+grant connect, select_catalog_role, resource, create session, create synonym, create view to C##MED_ONE;
+alter user C##MED_ONE quota 100M on USERS;
+alter user C##MED_ONE quota 100M on SYSTEM;
+grant execute on sys.dbms_stats to C##MED_ONE;
+grant select_catalog_role to C##MED_ONE;*/
+
+--Create TABLE patient(s_id NUMBER primary key, first_name varchar2(20), last_name varchar2(20), date_of_birth DATE, document_type_id Number, 
+--document_number varchar2(20), OMS_Polis number);
+
+--Create TABLE record_table(s_id NUMBER primary key, patient_id number, doctor_id number, date_time DATE);
+
+--Create TABLE clinic(s_id NUMBER primary key, clinic_name varchar2(50), clinic_adress varchar2(50), clinic_num number);
+
+--Create TABLE shifts(s_id NUMBER primary key, clinic number, shift_num number);
+
+--Create TABLE Doctors(s_id NUMBER primary key, first_name varchar2(50), last_name varchar2(50), speciality_id number, shift_id number);
+
+--Create TABLE doc_type(s_id NUMBER primary key, document_name varchar2(50));
+
+--Create TABLE speciality(s_id NUMBER primary key, s_name varchar2(50), s_comment varchar2(200));
+
+
+
+/*ALTER TABLE patient
+ADD FOREIGN KEY (document_type_id) REFERENCES doc_type(s_id);*/
+
+/*ALTER TABLE shifts
+ADD FOREIGN KEY (clinic) REFERENCES clinic(s_id);*/
+
+/*ALTER TABLE record_table
+ADD FOREIGN KEY (patient_id) REFERENCES patient(s_id);*/
+
+/*ALTER TABLE record_table
+ADD FOREIGN KEY (doctor_id) REFERENCES doctors(s_id);*/
+
+/*ALTER TABLE doctors
+ADD FOREIGN KEY (speciality_id) REFERENCES speciality(s_id);*/
+
+/*ALTER TABLE doctors
+ADD FOREIGN KEY (shift_id) REFERENCES shifts(s_id);*/
+
+--create index p_date_of_birth on patient(date_of_birth);
+
+--create index rec_date_time on record_table(date_time);
+
+/*create sequence s_sequence
+start with 1
+increment by 1;*/
+
+/*create trigger s_trigger 
+before insert on patient for each row
+begin
+  select s_sequence.nextval
+  into : new.s_id 
+  from dual;
+end;  */
+
+/*create trigger s_trigger_rec 
+before insert on record_table for each row
+begin
+  select s_sequence.nextval
+  into : new.s_id 
+  from dual;
+end; */
+
+/*create trigger s_trigger_clinic 
+before insert on clinic for each row
+begin
+  select s_sequence.nextval
+  into : new.s_id 
+  from dual;
+end;  */
+
+/*create trigger s_trigger_shifts 
+before insert on shifts for each row
+begin
+  select s_sequence.nextval
+  into : new.s_id 
+  from dual;
+end;*/
+
+/*create trigger s_trigger_doctors 
+before insert on doctors for each row
+begin
+  select s_sequence.nextval
+  into : new.s_id 
+  from dual;
+end;  */
+
+/*create trigger s_trigger_doctype
+before insert on doc_type for each row
+begin
+  select s_sequence.nextval
+  into : new.s_id 
+  from dual;
+end; 
+*/
+
+/*create trigger s_trigger_spec
+before insert on speciality for each row
+begin
+  select s_sequence.nextval
+  into : new.s_id 
+  from dual;
+end; */
