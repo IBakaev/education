@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.407,C:\Users\Илья\Desktop\Paint Delphi\project\Project2.dproj=C:\Users\Илья\Desktop\Paint Delphi\project\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.949,C:\Users\Илья\Desktop\Paint Delphi\project\Project1.dproj=C:\Users\Илья\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.755,=C:\Users\Илья\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.755,C:\Users\Илья\Desktop\Paint Delphi\project\Project2.dproj=C:\Users\Илья\Desktop\Compl_paint\Paint.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.822,C:\Users\Илья\Desktop\Paint Delphi\project\Unit1.pas=C:\Users\Илья\Desktop\Compl_paint\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.724,C:\Users\Илья\Desktop\Paint Delphi\project\Unit1.pas=C:\Users\Илья\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.822,C:\Users\Илья\Desktop\Paint Delphi\project\Unit1.dfm=C:\Users\Илья\Desktop\Compl_paint\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.724,C:\Users\Илья\Desktop\Paint Delphi\project\Unit1.dfm=C:\Users\Илья\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
