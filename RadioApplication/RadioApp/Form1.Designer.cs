@@ -185,6 +185,7 @@ namespace RadioApp
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Enabled = false;
             this.pictureBox6.Image = global::RadioApp.Properties.Resources.stop;
             this.pictureBox6.Location = new System.Drawing.Point(7, 142);
             this.pictureBox6.Name = "pictureBox6";
